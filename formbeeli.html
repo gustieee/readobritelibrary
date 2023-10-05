@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pembelian</title>
+    <link rel="stylesheet" href="formbeli.css">
+    <link rel="website icon" type="png" href="3b557ea0-51ba-4460-8eab-3281bd4dcd89.png"/>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Form Pembelian</h2>
+        <form id="purchaseForm">
+            <label for="nama">Buku Yang Ingin Dibeli:</label>
+            <select name="ekspedisi" id="">
+                <option value="">Pilih Buku</option>
+                <option value="JNE">Bumi</option>
+                <option value="J&T">Bulan</option>
+                <option value="SiCepat">Bintang</option>
+                <option value="Anteraja">Komet Minor</option>
+                <option value="">Selena</option>
+                <option value="">Bibi Gill</option>
+                <option value="">Matahari Minor</option>
+                <option value="">Pulang</option>
+                <option value="">Ceros Dan Batozar</option>
+            </select>
+
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon" required>
+
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" required></textarea>
+
+            <label for="metodePembayaran">Metode Pembayaran:</label>
+           
+            <table>
+                <tr>
+                    <td>
+                        <input type="radio" id="qr" name="metode">
+                        <label for="qr">
+                        <img src="qris.jpeg" alt="" style="width: 80px; height: 80px;" id="qris">
+                        </label>
+                    </td>
+                    <td>
+                        <input type="radio" id="cod" name="metode">
+                        <label for="cod">
+                        <img src="e60c7fb17ef375a76f66b48680c14352-removebg-preview.png" alt="" style="width: 120px; height: 80px;">
+                        </label>
+                    </td>
+                </tr>
+                <table>
+                    <tr>
+                    <td><label for="">Scan QRIS:</label></td>
+                    </tr>
+                    <tr>
+                    <td><img src="qr.jpeg" alt="" style="width: 200px; height: 200px; margin-left: 100px;"></td>
+                    </tr>
+                </table>
+                <label for="nama">Transfer BRI Ke Rekening:</label>
+                <label for=""><b>035601081924501 A/n Andri</b></label>
+                
+            </table>
+    
+            <label for="ekspedisi">Pilihan Ekspedisi:</label>
+            <select name="ekspedisi" id="">
+            <option value="JNE">JNE</option>
+            <option value="J&T">J&T</option>
+            <option value="SiCepat">SiCEPAT</option>
+            <option value="Anteraja">Anteraja</option>
+
+               
+
+            </select>
+        
+            
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h3>Pembelian Berhasil!</h3>
+            <p>Terima kasih atas pembelian Anda. Detail pembelian telah kami terima.</p>
+        </div>
+    </div>
+
+    <script>
+        const purchaseForm = document.getElementById("purchaseForm");
+        const successPopup = document.getElementById("successPopup");
+
+        purchaseForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            showPopup();
+        });
+
+        function showPopup() {
+            successPopup.style.display = "block";
+        }
+
+        function closePopup() {
+            successPopup.style.display = "none";
+        }
+    </script>
+</body>
+</html>

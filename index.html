@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readobrite</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="website icon" type="png" href="3b557ea0-51ba-4460-8eab-3281bd4dcd89.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@1,500&family=Poppins&family=Ubuntu:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,500;1,500&family=Poppins&family=Ubuntu:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@1,500&family=Ubuntu:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+        body {
+            margin: 0;
+            background-color: white;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fcontainer {
+            position: fixed; top: 0; right: 0; left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(0, 153, 173);
+            width: 100%;
+            height: 80px;
+            box-shadow: 0px 0px 20px 0px;
+        }
+
+        .wrapper {
+            margin-left: 20px;
+        }
+
+        .judul {
+            display: flex;
+            font-size: 45px;
+            font-family: Inclusive Sans;
+            font-weight: bolds;
+            color: white;
+        }
+
+        .list {
+            margin: 30px 0px 30px 0px;
+            float: right;
+            display: flex;
+            list-style-type: none;
+        }
+
+        .gusti .gustiabe {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 25px;
+            font-family: poppins;
+        }
+
+        .list :hover {
+            background-color: rgb(0, 207, 207);
+            border-radius: 20px;
+            transition: 1s;
+        }
+
+        .cons {
+            margin: 70px 0px 0px 40px;
+            background-color: rgb(0, 138, 41);
+            border-radius: 50px;
+        }
+
+        .kolom {
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: poppins;
+        }
+
+        .isi {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .kolom button {
+            border-radius: 10px;
+            padding: 15px;
+            border: none;
+        }
+
+        .kolom button a {
+            color: black;
+            font-family: poppins;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .cons1 {
+            margin: 100px 0px 0px 40px;
+            background-color: rgb(24, 0, 129);
+            border-radius: 50px;
+        }
+
+        .cons2 {
+            margin: 100px 0px 0px 40px;
+            background-color: rgb(99, 0, 212);
+            border-radius: 50px;
+        }
+
+        .cons3 {
+            margin: 100px 0px 0px 40px;
+            background-color: rgb(236, 81, 81);
+            border-radius: 50px;
+        }
+
+        .cons4 {
+            margin: 100px 0px 0px 40px;
+            background-color: rgb(84, 201, 133);
+            border-radius: 50px;
+        }
+
+        .cons5 {
+            margin: 100px 0px 0px 40px;
+            background-color: rgb(224, 202, 75);
+            border-radius: 50px;
+        }
+
+        .cons6 {
+            margin: 100px 0px 0px 40px;
+            background-color: rgb(228, 75, 69);
+            border-radius: 50px;
+        }
+
+        .cons7 {
+            margin: 100px 0px 0px 40px;
+            background-color: rgb(69, 143, 228);
+            border-radius: 50px;
+        }
+
+        .cons8 {
+            margin: 100px 0px 0px 40px;
+            background-color: rgb(75, 46, 204);
+            border-radius: 50px;
+        }
+
+        .h1daftar {
+            font-size: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: montserrat;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        .footer {
+            box-shadow: 20px 0px 0px 0px;
+            background-color: rgba(8, 90, 105, 0.646);
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px;
+            padding: 50px 50px 60px 50px;
+            margin-top: 80px;
+        }
+
+        .footer .footer-left,
+        .footer .footer-center,
+        .footer .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        @media (max-height:800px){
+            footer {
+                position: static;
+            }
+            header {
+                padding-top: 40px;
+            }
+        }
+
+        .footer .footer-left {
+            width: 30%;
+        }
+
+        .footer h3 {
+            color: #f5f5f5;
+            font-family: poppins;
+            margin: 0;
+            margin-top: 10px;
+
+        }
+
+        .footer .footer-left img {
+            width: 20%;
+            vertical-align: middle;
+            margin-bottom: 0px;
+        }
+
+        .footer .footer-left .credit-cards {
+            width: 100%;
+        }
+
+        .footer .credit-cards img {
+            margin-top: -60px;
+        }
+        
+        .footer .footer-copyright{
+            color: #fdfeff;
+            font-size: 12px;
+            font-weight: normal;
+            margin: 0;
+            margin-top: -60px;
+            font-family: poppins;
+        }
+
+        .footer .credit-cards img .bank{
+            margin-left: -100px;
+        }
+
+        .footer .credit-cards .listt{
+            margin-top: -20px; float: right; margin-right: 50px;
+            text-decoration: none;
+            list-style: none;
+            
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="fcontainer">
+        <div class="wrapper">
+            <div class="judul">Readobrite</div>
+        </div>
+        <ul class="list">
+            <li class="gusti"><a href="#home" class="gustiabe">Home</a></li>
+            <li class="gusti"><a href="#daftar" class="gustiabe">Daftar Buku</a></li>
+            <li class="gusti"><a href="#services" class="gustiabe">Contact</a></li>
+            <li class="gusti"><a href="login.html" class="gustiabe">Login</a></li>
+        </ul>
+    </div>
+
+    <div class="">
+        <section id="home">
+            <img src="1695685173161.jpg" width="100%" height="700px" alt="">
+        </section>
+    </div>
+    <div id="daftar"></div>
+    <h1 class="h1daftar">Daftar Buku :</h1>
+    <div class="cons">
+        <section id="daftar">
+            <div class="isi">
+                <img src="bumi.jpg" width="200" height="300">
+                <div class="kolom">
+                    <p>Judul : Bumi</p>
+                    <p>Sinopsis : Novel ini mengisahkan tentang petualangan 3 remaja yang berusia 15 tahun bernama Raib, Ali dan Seli. Namun mereka bukanlah remaja biasa, melainkan remaja yang memiliki kekuatan khusus seperti Raib yang bisa menghilang, Seli yang bisa mengeluarkan petir dan Ali seorang pelajar yang sangat jenius</p>
+                    <p>Pengarang : TERE LIYE</p>
+                    <button><a href="formbeeli.html">Beli</a></button>
+                    <button><a href="pinjam.html">Pinjam</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="cons1">
+        <section id="#">
+            <div class="isi">
+                <img src="bulan.jpg" width="200" height="300">
+                <div class="kolom">
+                    <p>Judul : Bulan</p>
+                    <p>Sinopsis : Av ingin menemui ketua konsil Klan Matahari untuk mencari Federasi saat melawan Tamus. Konsil Klan Matahari ingin menguasai Klan Matahari.Mereka pergi dengan bantuan dari Buku Kehidupan milik Raib. Akhirnya, dengan kelebihan dan kemampuan masing-masing, mereka memutuskan pergi ke Klan Matahari</p>
+                    <p>Pengarang : TERE LIYE</p>
+                    <button><a href="formbeeli.html">Beli</a></button>
+                    <button><a href="pinjam.html">Pinjam</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="cons2">
+        <section id="#">
+            <div class="isi">
+                <img src="bintang.jpg" width="200" height="300">
+                <div class="kolom">
+                    <p>Judul : Bintang</p>
+                    <p>Sinopsis : Namaku Raib, aku bisa menghilang. Seli, teman semejaku, bisa mengeluarkan petir dari telapak tangannya. Dan Ali, si biang kerok sekaligus si genius, bisa berubah menjadi beruang raksasa. Kami bertiga kemudian bertualang ke dunia paralel yang tidak diketahui banyak orang</p>
+                    <p>Pengarang : TERE LIYE</p>
+                    <button><a href="formbeeli.html">Beli</a></button>
+                    <button><a href="pinjam.html">Pinjam</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="cons3">
+        <section id="#">
+            <div class="isi">
+                <img src="komet minor.jpg" width="200" height="300">
+                <div class="kolom">
+                    <p>Judul : Komet Minor</p>
+                    <p>Sinopsis : Pertarungan untuk melawan si Tanpa Mahkota akan berakhir di sini.  Siapa pun yang menang, semua berakhir di cerita ini, di Klan Komet Minor, tempat dimana aliansi Para Pemburu yang pernah dibentuk, serta pusaka terhebat pernah diciptakan.</p>
+                    <p>Pengarang : TERE LIYE</p>
+                    <button><a href="formbeeli.html">Beli</a></button>
+                    <button><a href="pinjam.html">Pinjam</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="cons4">
+        <section id="#">
+            <div class="isi">
+                <img src="selena.jpg" width="200" height="300">
+                <div class="kolom">
+                    <p>Judul : Selena</p>
+                    <p>Sinopsis : Selepas ibunda Selena wafat, Selena hidup bersama paman dan bibinya. Disana ia bekerja di perusahaan pamannya di bidang konstruksi bangunan. Selena tidak pernah mengeluh, meski ia menjadi satu-satunya perempuan di proyek </p>
+                    <p>Pengarang : TERE LIYE</p>
+                    <button><a href="formbeeli.html">Beli</a></button>
+                    <button><a href="pinjam.html">Pinjam</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="cons5">
+        <section id="#">
+            <div class="isi">
+                <img src="bibi gil.jpg" width="200" height="300">
+                <div class="kolom">
+                    <p>Judul : Bibi Gill
+                    <p>Sinopsis : Gill adalah sapaan akrab dari keluarganya serta penduduk di Distrik Malam dan Misterinya. Dia merupakan satu-satunya anak perempuan yang paling kecil dari tujuh bersaudara. Dia seperti anak-anak pada umumnya, masih suka bermain dan bercanda. Namun yang membedakan dari rekan-rekannya, Gill memiliki kode genetik langka layaknya pemilik keturunan murni</p>
+                    <p>Pengarang : TERE LIYE</p>
+                    <button><a href="formbeeli.html">Beli</a></button>
+                    <button><a href="pinjam.html">Pinjam</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="cons6">
+        <section id="#">
+            <div class="isi">
+                <img src="matahari minor.jpg" width="200" height="300">
+                <div class="kolom">
+                    <p>Judul : Matahari Minor
+                    <p>Sinopsis : Novel ini menceritakan Seli dan Raib setelah kejadian di SagaraS, dimana Ali tidak mengikuti mereka lagi.</p>
+                    <p>Pengarang : TERE LIYE</p>
+                    <button><a href="formbeeli.html">Beli</a></button>
+                    <button><a href="pinjam.html">Pinjam</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="cons7">
+        <section id="#">
+            <div class="isi">
+                <img src="pulang.jpg" width="200" height="300">
+                <div class="kolom">
+                    <p>Judul : Pulang
+                    <p>Sinopsis : Kisah ini bermula ketika Bujang, seorang anak berusia 15 tahun yang memiliki kemampuan hebat dalam berburu babi hutan dapat membuat Teuke Muda terkesan dan akhirnya membawanya ke Kota untuk diasuh seperti layaknya anak angkat</p>
+                    <p>Pengarang : TERE LIYE</p>
+                    <button><a href="formbeeli.html">Beli</a></button>
+                    <button><a href="pinjam.html">Pinjam</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="cons8">
+        <section id="#">
+            <div class="isi">
+                <img src="ceros.jpg" width="200" height="300">
+                <div class="kolom">
+                    <p>Judul : Ceros & Batozar
+                    <p>Sinopsis : Awalnya mereka hanya mengikuti karyawisata di salah satu situs bangunan kuno. Hingga Ali dengan kegeniusan dan rasa penasarannya, Karena sensor miliknya menunjukan skala 10. ILY versi 5 mendekteksi bahwa ada situs kuno yang sama di bawah tanah. ILY menemukan pintu masuk dengan lorong kuno. Ali langsung memeriksanya, mengambil alih kemudi dan mematikan mode suara ILY karena ILY dianggap cerewat dan terlalu mengkhawatirkan bahaya yang akan menimpa.
+
+                    </p>
+                    <p>Pengarang : TERE LIYE</p>
+                    <button><a href="formbeeli.html">Beli</a></button>
+                    <button><a href="pinjam.html">Pinjam</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section id="services">
+
+        <footer>
+            <div class="footer">
+                <h3>Payment Method</h3>
+                <h3 style="margin-left: 607px; margin-top: -30px;">Contact us</h3>
+                <div class="credit-cards">
+                    <img src="qris_putih.png" style="width: 200px; margin-bottom: 65px;">
+                    <img  src="e60c7fb17ef375a76f66b48680c14352-removebg-preview.png" alt="" class="bank" width="400px" height="210px" style="margin-left: -75px; margin-top: -60px;">
+                    <a href="https://wa.me/6285891388433"><img src="whatsapp.png" alt="" style="width: 30px; margin-bottom: 117px; margin-left: 70px;" ></a>
+                    <a href="https://instagram.com/hnnfhmyy?igshid=NGVhN2U2NjQ0Yg=="><img src="instagram-transparent-image-5-removebg-preview.png" alt="" style="width: 40px; margin-bottom: 113px; ;"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100079607179834&mibextid=ZbWKwL"><img src="1200x630wa-removebg-preview.png" alt="" style="width: 77px; margin-bottom: 113px; margin-left: -22px;"></a>
+                    <a href="term.html#term"  ><h3 style="margin-top: -30px; float: right; margin-right: 150px;">Terms Of services</h3></a>
+                    <div class="listt">
+                     <ul style="list-style: none;">
+                        <a href="term.html#ketentuan" style="text-decoration: none;"><li style="color: white;">Ketentuan</li></a>
+                        <a href="term.html#Keamanan" style="text-decoration: none;"><li style="color:  white;">Keamanan Website</li></a>
+                        <a href="term.html#konten" style="text-decoration: none;"><li style="color: white;">Konten Dan Aktivitas</li></a>
+                        <a href="term.html#anti-spam" style="text-decoration: none;"><li style="color:  white;">Zero Tolerance Anti-Spam Policy</li></a>
+                        <a href="term.html#salah" style="text-decoration: none;"><li style="color: white;">Penyalahgunaan Sumberdaya Sistem</li></a>
+                        <a href="term.html#suspen" style="text-decoration: none;"><li style="color:  white;">Suspensi</li></a>
+                     </ul>
+                    </div>
+                </div>
+
+                <p class="footer-copyright">@2023 Reobrite Library</p>
+            </div>
+
+        </footer>
+    </section>
+</body>
+</html>
